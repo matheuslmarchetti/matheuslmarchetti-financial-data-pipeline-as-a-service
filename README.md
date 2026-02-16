@@ -1,141 +1,95 @@
-# 🚀 Financial Data Pipeline as a Service
+# Financial Data Pipeline as a Service
 
-Pipeline de dados financeiros automatizado com coleta diária, validação, versionamento e disponibilização via API REST segura e versionada.
+## 📌 Visão Geral
+
+Plataforma profissional de dados financeiros desenvolvida com FastAPI e PostgreSQL.
+
+O sistema realiza ingestão automatizada de dados de mercado (yFinance, FRED e RSS), controla execuções de pipeline, versiona datasets e fornece API segura com autenticação JWT.
+
+Projetado como base confiável para sistemas de Inteligência Artificial.
 
 ---
 
-## 📌 Objetivo
+## 🎯 Objetivo do Projeto
 
-Evoluir o projeto anterior **Market Insight Automation API** para uma arquitetura profissional de Engenharia de Dados, simulando um ambiente real de empresa.
+Construir uma infraestrutura de dados financeiros que:
 
-Este projeto implementa:
+* Realiza ingestão automatizada de múltiplas fontes
+* Rastreia execuções de pipeline
+* Versiona datasets para reprodutibilidade
+* Garante segurança com autenticação JWT
+* Possui observabilidade e logs estruturados
+* Está pronta para deploy em ambiente profissional
 
-- Coleta automatizada de dados financeiros
-- Validação e tratamento de dados
-- Versionamento de dados
-- Armazenamento estruturado em PostgreSQL
-- API REST versionada
-- Autenticação com JWT
-- Controle de acesso por roles
-- Logs estruturados
-- Observabilidade com métricas
-- Simulação de ambientes (dev / staging / prod)
-- Pipeline com reprocessamento
+Este projeto serve como camada de dados para futuros sistemas de IA e ML.
 
 ---
 
 ## 🏗 Arquitetura
 
-O projeto é dividido em duas grandes camadas:
+Arquitetura em camadas:
 
-### 1️⃣ Data Pipeline
-Responsável por:
-- Coleta de dados de mercado (yFinance)
-- Dados macroeconômicos (FRED)
-- Notícias (Google News RSS via feedparser)
-- Validação
-- Persistência
-- Registro de execução do pipeline
-
-### 2️⃣ API REST
-Responsável por:
-- Expor dados versionados
-- Autenticação via OAuth2 + JWT
-- Controle de acesso
-- Rate limit
-- Logs estruturados
-- Health checks
-- Métricas
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-- Python 3.13
-- FastAPI
-- PostgreSQL
-- Redis
-- SQLAlchemy
-- Alembic
-- APScheduler
-- yFinance
-- fredapi
-- feedparser
-- Docker & Docker Compose
-- Prometheus (métricas)
-- GitHub Actions (CI/CD)
+* API (FastAPI)
+* Service Layer (regras de negócio)
+* Repository Layer (acesso a dados)
+* PostgreSQL
+* Autenticação JWT
+* Sistema de rastreamento de pipeline
 
 ---
 
 ## 🔐 Segurança
 
-- OAuth2 Password Flow
-- JWT
-- Controle de acesso por roles
-- Rate limiting
-- Versionamento de API (/api/v1)
+* Autenticação JWT
+* Controle de acesso por roles (admin / user)
+* Hash seguro de senha
+* Configuração por variáveis de ambiente
 
 ---
 
-## 📊 Observabilidade
+## 📊 Conceitos de Engenharia de Dados Aplicados
 
-- Logs estruturados em JSON
-- Métricas de performance
-- Monitoramento de execução do pipeline
-- Endpoints de health check
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-
-financial-data-pipeline-as-a-service/
-│
-├── app/
-├── tests/
-├── docker-compose.yml
-├── Dockerfile
-├── .env.dev
-├── .env.staging
-├── .env.prod
-└── README.md
-
-```
+* Versionamento de dados
+* Rastreabilidade de ingestão
+* Metadata de execução
+* Reprocessamento controlado
+* Estrutura orientada a ML
+* Logs estruturados
 
 ---
 
-## 🎯 Objetivo Profissional
+## 🌎 Fontes de Dados
 
-Este projeto foi desenvolvido com foco em preparação para vagas como:
-
-- Engenheiro de Dados Jr
-- Engenheiro de Machine Learning Jr
-- Analista Desenvolvedor de Sistemas (APIs)
-- Backend Engineer
+* yFinance (ativos financeiros)
+* FRED (indicadores macroeconômicos)
+* RSS financeiro (notícias)
 
 ---
 
-## 🚀 Próximos Passos
+## 🚀 Tecnologias
 
-- Implementação do pipeline automatizado
-- Versionamento de dados
-- Autenticação e autorização
-- Observabilidade
-- CI/CD
+* Python
+* FastAPI
+* SQLAlchemy
+* PostgreSQL
+* JWT
+* Docker
+* Render
 
 ---
 
-## 📚 Contexto
+## 🧠 Integração Futura com IA
 
-Este projeto é a evolução do:
+A plataforma foi projetada para servir como base de dados para:
 
-**Market Insight Automation API**
-
-Agora estruturado como um pipeline de dados profissional com arquitetura escalável.
+* Sistemas de análise de sentimento
+* Modelos de previsão financeira
+* Sistemas de recomendação
+* Relatórios inteligentes automatizados
 
 ---
 
 ## 👨‍💻 Autor
 
-Matheus Marchetti
+**Matheus Lunguinho Marchetti**
+Python | Dados | Automação | APIs | IA
