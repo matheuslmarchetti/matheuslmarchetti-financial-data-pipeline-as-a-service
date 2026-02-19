@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 class TransactionCreate(BaseModel):
     description: str
@@ -11,6 +11,9 @@ class TransactionResponse(BaseModel):
     description: str
     amount: float
     user_id: int
+    dataset_version: str
+    pipeline_run_id: Optional[int]
+
 
     class Config:
         from_attributes = True
